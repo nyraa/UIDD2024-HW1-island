@@ -1,5 +1,11 @@
 window.addEventListener("load", function() {
-    drawIsland(3)
+    drawIsland(3);
+
+    const supportButton = document.getElementById("support_button");
+    supportButton.addEventListener("click", function() {
+        const dialog = document.getElementById("resident");
+        dialog.showModal();
+    });
 });
 
 function drawIsland(stage=0)
@@ -10,7 +16,7 @@ function drawIsland(stage=0)
     canvas.width = canvas.width;
     
     const image = new Image();
-    image.src = `assets/${stage}.png`;
+    image.src = `assets/island/${stage}.png`;
 
     image.onload = function() {
         ctx.drawImage(image, 0, 0);

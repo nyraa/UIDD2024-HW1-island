@@ -124,3 +124,53 @@ button:active
     padding: 5px 50px;
     
 }
+
+/* dialog */
+dialog
+{
+    border: none;
+    width: 80%;
+    height: 90%;
+    position: absolute;
+    font-family: Agency-FB;
+    background-color: transparent;
+    padding: 0;
+    flex-flow: column;
+    outline: none;
+}
+dialog[open]
+{
+    display: flex;
+}
+
+.dialog-header
+{
+    display: flex;
+    width: 100%;
+    background-color: rgba(200, 160, 99, .61);
+    height: 50px;
+}
+
+.dialog-title
+{
+    flex: 1;
+    text-align: center;
+}
+
+.dialog-body
+{
+    background-color: #D2C8BB;
+    flex: 1;
+    border: 2px solid #A48B78;
+    display: flex;
+}
+
+.resident-info
+{
+    width: 25%;
+}
+
+.resident-photo img
+{
+    width: 100%;
+}
