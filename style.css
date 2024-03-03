@@ -1,0 +1,73 @@
+html, body
+{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+}
+
+body
+{
+    margin: 0;
+}
+
+nav
+{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo
+{
+    margin-left: 90px;
+}
+
+.nav-links
+{
+    display: flex;
+    flex: 1;
+    align-items: center;
+    list-style-type: none;
+}
+
+.nav-links li
+{
+    margin: 0 40px;
+}
+
+.account-action-links
+{
+    margin-right: 30px;
+}
+
+#body
+{
+    background: linear-gradient(#cae9e1, #408dcb);
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+}
+
+#island_canvas
+{
+    height: 100%;
+}
+
+.mark
+{
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    font-size: 50pt;
+}
+
+#support_button
+{
+    position: absolute;
+    right: 10%;
+    bottom: 20%;
+    padding: 0 30px;
+    font-size: 40pt;
+}
