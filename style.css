@@ -61,6 +61,8 @@ nav
     top: 30%;
     right: 10%;
     font-size: 50pt;
+    font-family: Agency-FB;
+    font-weight: bold;
 }
 
 #support_button
@@ -68,6 +70,8 @@ nav
     position: absolute;
     right: 10%;
     bottom: 20%;
-    padding: 0 30px;
-    font-size: 40pt;
+    padding: 0 40px;
+    font-size: 35pt;
+    font-family: Agency-FB;
+    font-weight: bold;
 }
