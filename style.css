@@ -24,6 +24,7 @@ nav a
 {
     text-decoration: none;
     color: black;
+    font-size: 16pt;
 }
 
 .logo
@@ -88,7 +89,7 @@ nav a
 {
     position: absolute;
     top: 30%;
-    right: 10%;
+    right: 3%;
     font-size: 50pt;
     font-family: Agency-FB;
     font-weight: bold;
@@ -118,7 +119,7 @@ button:active
 #support_button
 {
     position: absolute;
-    right: 10%;
+    right: 3%;
     bottom: 20%;
     padding: 5px 50px;
     
