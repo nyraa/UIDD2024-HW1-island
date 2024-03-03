@@ -2,3 +2,7 @@
     font-family: "Agency-FB";
     src: url("fonts/Agency-FB.woff2") format("woff2");
 }
+@font-face {
+    font-family: "Iansui";
+    src: url("fonts/Iansui-Regular.woff2") format("woff2");
+}

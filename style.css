@@ -17,6 +17,13 @@ nav
     width: 100%;
     display: flex;
     align-items: center;
+    font-family: Iansui;
+}
+
+nav a
+{
+    text-decoration: none;
+    color: black;
 }
 
 .logo
@@ -65,13 +72,32 @@ nav
     font-weight: bold;
 }
 
+button
+{
+    font-size: 35pt;
+    font-family: Agency-FB;
+    font-weight: bold;
+    cursor: pointer;
+
+    background-color: #874539;
+    color: white;
+    border: none;
+    box-shadow: 0 7px 0 #602c24;
+    border-radius: 10px;
+    outline: none;
+}
+
+button:active
+{
+    box-shadow: 0 3px 0 #602c24;
+    transform: translateY(4px);
+}
+
 #support_button
 {
     position: absolute;
     right: 10%;
     bottom: 20%;
-    padding: 0 40px;
-    font-size: 35pt;
-    font-family: Agency-FB;
-    font-weight: bold;
+    padding: 5px 50px;
+    
 }
