@@ -6,6 +6,12 @@ window.addEventListener("load", function() {
         const dialog = document.getElementById("resident");
         dialog.showModal();
     });
+
+    this.document.querySelectorAll(".back-button, .close-button").forEach(button => {
+        button.addEventListener("click", function() {
+            this.closest("dialog").close();
+        });
+    });
 });
 
 function drawIsland(stage=0)
