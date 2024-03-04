@@ -173,12 +173,29 @@ dialog[open]
     border: 1px solid #D9CA7A;
     padding: 2px 4px;
     border-radius: 8px;
+    position: absolute;
+    right: 80px;
 }
 
 #resident_count
 {
     margin: 0 20px;
     font-size: 16pt;
+}
+
+.help-button
+{
+    background-color: white;
+    border: 1px solid #D9CA7A;
+    border-radius: 50%;
+    font-size: 20pt;
+    height: 31px;
+    width: 31px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 26px;
 }
 
 .dialog-body
