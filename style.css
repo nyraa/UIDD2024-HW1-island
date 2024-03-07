@@ -106,8 +106,11 @@ button
     color: white;
     border: none;
     box-shadow: 0 7px 0 #602c24;
-    border-radius: 10px;
+    border-radius: 7px;
     outline: none;
+    border-image-source: url(assets/button.svg);
+    border-image-width: 10px 10px 20px 10px;
+    border-image-slice: 20 20 39 20;
 }
 
 button:active
