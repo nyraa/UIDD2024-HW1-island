@@ -142,6 +142,7 @@ dialog
     padding: 0;
     flex-flow: column;
     outline: none;
+    overflow: visible;
 }
 dialog[open]
 {
@@ -199,6 +200,21 @@ dialog[open]
     align-items: center;
     position: absolute;
     right: 26px;
+}
+
+.close-button
+{
+    position: absolute;
+    background-color: #874539;
+    --button-size: 40px;
+    width: var(--button-size);
+    height: var(--button-size);
+    right: calc(-1 * var(--button-size));
+    top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
 
 .dialog-body
