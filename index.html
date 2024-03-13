@@ -109,16 +109,78 @@
             <!-- dialog "detail": resident detail -->
             <input type="radio" class="dialog-card-selector" data-card-step="detail" name="main_dialog_card" />
             <div class="dialog-body" id="dialog_resident_detail">
-                <div class="resident-detail">
-                    resident details
+                <img class="resident-big-photo" src="assets/residents/ryo.png" />
+                <div class="resident-description">
+                    fofofobaraarar
+                </div>
+                <div class="pay-plan">
+                    <select id="pay_plan">
+                        <option value="1">月捐</option>
+                        <option value="2">季捐</option>
+                        <option value="3">半年捐</option>
+                        <option value="4">年捐</option>
+                    </select>
+                    <div class="money-tag">$700</div>
+                    <input type="checkbox" id="extra_support" />
+                    <label for="extra_support">支持發展型志工</label>
+                    <div class="money-tag">$500</div>
+                    <div class="notification">
+                        【捐款注意事項說明】
+                        因應洗錢防制法規定，
+                        ATM 轉帳，單筆交易上限為 49,999 元。
+                        信用卡（包括國外卡、Google pay、samsung pay、line pay、銀聯卡）等交易，單筆上限為 199,999 元。
+                        美國運通卡不在此限額。
+                    </div>
+                    <button id="select_plan">Support!</button>
                 </div>
             </div>
 
             <!-- dialog "payment": payment info form -->
-            <input type="radio" class="dialog-card-selector" data-card-step="payment" name="main_dialog_card" />
+            <input type="radio" class="dialog-card-selector" data-card-step="payment" name="main_dialog_card" checked />
             <div class="dialog-body" id="dialog_payment_info">
                 <div class="payment-info">
-                    payment info
+                    <!-- 捐款人姓名 -->
+                    <div class="left-half">
+                        <label class="required">捐款人姓名</label>
+                        <input type="text" id="donor_name" />
+                    </div>
+                    <!-- 稱謂 -->
+                    <div class="right-half">
+                        <label class="required">稱謂</label>
+                        <select id="donor_title">
+                            <option value="1">先生</option>
+                            <option value="2">小姐</option>
+                            <option value="3">牛角麵包</option>
+                            <option value="4">戰鬥直升機</option>
+                        </select>
+                    </div>
+                    <!-- 連絡電話 -->
+                    <div class="left-half">
+                        <label class="required">連絡電話</label>
+                        <input type="text" id="donor_phone" />
+                    </div>
+                    <!-- 生日 -->
+                    <div class="right-half">
+                        <label class="required">生日</label>
+                        <input type="date" id="donor_birthday" />
+                    </div>
+                    <!-- 國家 -->
+                    <div>
+                        <label class="required">國家</label>
+                        <select id="donor_country">
+                        </select>
+                    </div>
+                    <!-- 縣市 -->
+                    <div>
+                        <label class="required">縣市</label>
+                        <select id="donor_city">
+                        </select>
+                    </div>
+                    <!-- 地址 -->
+                    <div class="full-width">
+                        <label class="required">地址</label>
+                        <input type="text" id="donor_address" />
+                    </div>
                 </div>
             </div>
 
