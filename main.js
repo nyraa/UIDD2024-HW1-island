@@ -1,15 +1,22 @@
+const dialogModel = new DialogModel();
 window.addEventListener("load", function() {
     drawIsland(3);
 
     const supportButton = document.getElementById("support_button");
     supportButton.addEventListener("click", function() {
         const dialog = document.getElementById("resident");
-        dialog.showModal();
+        dialogModel.show(dialog);
     });
 
-    this.document.querySelectorAll(".back-button, .close-button").forEach(button => {
+    this.document.querySelectorAll(".back-button").forEach((button) => {
         button.addEventListener("click", function() {
-            this.closest("dialog").close();
+            // this.closest("dialog").close();
+            dialogModel.pop();
+        });
+    });
+    this.document.querySelectorAll(".close-button").forEach((button) => {
+        button.addEventListener("click", function() {
+            dialogModel.closeAll();
         });
     });
 });
