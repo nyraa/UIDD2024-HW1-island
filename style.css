@@ -6,6 +6,11 @@ html, body
     flex-flow: column;
 }
 
+*
+{
+    box-sizing: border-box;
+}
+
 body
 {
     margin: 0;
@@ -255,7 +260,6 @@ dialog[open]
     background-color: white;
     border: 2px solid #A48B78;
     border-radius: 5px;
-    box-sizing: border-box;
 }
 
 .resident-photo
@@ -288,6 +292,18 @@ dialog[open]
 {
     flex-flow: column;
 }
+
+#dialog_payment_info h3
+{
+    margin-top: 0;
+}
+
+.payment-info-layout
+{
+    padding: 20px 50px 10px 50px;
+    font-weight: normal;
+}
+
 .payment-info
 {
     display: grid;
@@ -296,24 +312,26 @@ dialog[open]
     width: 100%;
     flex: 0;
 }
+
+.required::before
+{
+    content: "*";
+    color: red;
+}
+
 .payment-info label
 {
     display: block;
+    margin-bottom: 8px;
 }
-.payment-info input, .payment-info select
+.payment-info input[type="text"], .payment-info input[type="date"], .payment-info select
 {
     width: 100%;
     font-size: 14pt;
-    border: 1px solid;
+    border: 1px #B5B5B6 solid;
+    outline: none;
     border-radius: 5px;
-}
-.payment-info input
-{
-    height: 35px;
-}
-.payment-info select
-{
-    height: 39px;
+    height: 43px;
 }
 .left-half
 {
@@ -326,4 +344,23 @@ dialog[open]
 .full-width
 {
     grid-column: 1 / 5;
+}
+
+.payment-footer label
+{
+    display: inline;
+    margin-right: 30px;
+}
+
+div:has(>#paymethod_next_button)
+{
+    grid-column: 4 / 5;
+    text-align: right;
+}
+#paymethod_next_button
+{
+    padding: 10px 24px;
+    font-size: 22pt;
+    display: inline-flex;
+    align-items: center;
 }

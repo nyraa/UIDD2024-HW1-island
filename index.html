@@ -138,48 +138,73 @@
             <!-- dialog "payment": payment info form -->
             <input type="radio" class="dialog-card-selector" data-card-step="payment" name="main_dialog_card" checked />
             <div class="dialog-body" id="dialog_payment_info">
-                <div class="payment-info">
-                    <!-- 捐款人姓名 -->
-                    <div class="left-half">
-                        <label class="required">捐款人姓名</label>
-                        <input type="text" id="donor_name" />
-                    </div>
-                    <!-- 稱謂 -->
-                    <div class="right-half">
-                        <label class="required">稱謂</label>
-                        <select id="donor_title">
-                            <option value="1">先生</option>
-                            <option value="2">小姐</option>
-                            <option value="3">牛角麵包</option>
-                            <option value="4">戰鬥直升機</option>
-                        </select>
-                    </div>
-                    <!-- 連絡電話 -->
-                    <div class="left-half">
-                        <label class="required">連絡電話</label>
-                        <input type="text" id="donor_phone" />
-                    </div>
-                    <!-- 生日 -->
-                    <div class="right-half">
-                        <label class="required">生日</label>
-                        <input type="date" id="donor_birthday" />
-                    </div>
-                    <!-- 國家 -->
-                    <div>
-                        <label class="required">國家</label>
-                        <select id="donor_country">
-                        </select>
-                    </div>
-                    <!-- 縣市 -->
-                    <div>
-                        <label class="required">縣市</label>
-                        <select id="donor_city">
-                        </select>
-                    </div>
-                    <!-- 地址 -->
-                    <div class="full-width">
-                        <label class="required">地址</label>
-                        <input type="text" id="donor_address" />
+                <div class="payment-info-layout">
+                    <h3>選擇捐款人</h3>
+                    <div class="payment-info">
+                        <!-- 捐款人姓名 -->
+                        <div class="left-half">
+                            <label class="required">捐款人姓名</label>
+                            <input type="text" placeholder="捐款人姓名" id="donor_name" />
+                        </div>
+                        <!-- 稱謂 -->
+                        <div class="right-half">
+                            <label class="required">稱謂</label>
+                            <select id="donor_title">
+                                <option value="1">先生</option>
+                                <option value="2">小姐</option>
+                                <option value="3">牛角麵包</option>
+                                <option value="4">戰鬥直升機</option>
+                            </select>
+                        </div>
+                        <!-- 聯絡電話 -->
+                        <div class="left-half">
+                            <label class="required">聯絡電話</label>
+                            <input type="text" placeholder="聯絡電話" id="donor_phone" />
+                        </div>
+                        <!-- 生日 -->
+                        <div class="right-half">
+                            <label class="required">生日</label>
+                            <input type="date" placeholder="生日" id="donor_birthday" />
+                        </div>
+                        <!-- 國家 -->
+                        <div>
+                            <label class="required">國家</label>
+                            <select id="donor_country">
+                            </select>
+                        </div>
+                        <!-- 縣市 -->
+                        <div>
+                            <label class="required">縣市</label>
+                            <select id="donor_city">
+                            </select>
+                        </div>
+                        <!-- 國家 -->
+                        <div>
+                            <label class="required">國家</label>
+                            <select id="donor_country">
+                            </select>
+                        </div>
+                        <!-- 縣市 -->
+                        <div>
+                            <label class="required">縣市</label>
+                            <select id="donor_city">
+                            </select>
+                        </div>
+                        <!-- 地址 -->
+                        <div class="full-width">
+                            <label class="required">地址</label>
+                            <input type="text" placeholder="例：中壢市龍川二街134號" id="donor_address" />
+                        </div>
+                        <div class="left-half payment-footer">
+                            <h3>選擇收據（僅限這次捐款使用）</h3>
+                            <input type="radio" name="receipt" id="receipt_no" value="1" checked />
+                            <label for="receipt_no">無須另開收據</label>
+                            <input type="radio" name="receipt" id="receipt_yes" value="2" />
+                            <label for="receipt_yes">新增收據</label>
+                        </div>
+                        <div>
+                            <button id="paymethod_next_button">付款方式　<i class="fa-solid fa-arrow-right fa-lg fa-inverse"></i></button>
+                        </div>
                     </div>
                 </div>
             </div>

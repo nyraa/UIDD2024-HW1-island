@@ -1,6 +1,5 @@
-const dialogModel = new DialogModel(document.getElementById("main_dialog"));
-
 window.addEventListener("load", function() {
+    const dialogModel = new DialogModel(document.getElementById("main_dialog"));
     drawIsland(3);
 
     const supportButton = document.getElementById("support_button");
@@ -11,12 +10,12 @@ window.addEventListener("load", function() {
 
     this.document.querySelectorAll(".back-button").forEach((button) => {
         button.addEventListener("click", function() {
-            
+            dialogModel.back();
         });
     });
     this.document.querySelectorAll(".close-button").forEach((button) => {
         button.addEventListener("click", function() {
-            
+            dialogModel.close();
         });
     });
 });

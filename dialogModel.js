@@ -25,6 +25,10 @@ class DialogModel
         {
             this.cardStack.pop().checked = false;
         }
+        else
+        {
+            this.close();
+        }
         if(this.cardStack.length > 0)
         {
             this.cardStack[this.cardStack.length - 1].checked = true;
