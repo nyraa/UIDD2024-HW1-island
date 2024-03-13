@@ -5,7 +5,8 @@ window.addEventListener("load", function() {
     const supportButton = document.getElementById("support_button");
     supportButton.addEventListener("click", function() {
         const dialog = document.getElementById("main_dialog");
-        dialog.showModal();
+        dialogModel.showCard("resident");
+        dialogModel.showModal();
     });
 
     this.document.querySelectorAll(".back-button").forEach((button) => {

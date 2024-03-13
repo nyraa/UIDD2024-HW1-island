@@ -15,7 +15,7 @@ class DialogModel
     }
     showCard(step)
     {
-        const selector = $(`.dialog-card-selector[data-card-step="${step}"]`);
+        const selector = document.querySelector(`.dialog-card-selector[data-card-step="${step}"]`);
         selector.checked = true;
         this.cardStack.push(selector);
     }
