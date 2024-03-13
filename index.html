@@ -30,7 +30,7 @@
             <div class="mark">MY FAMILY</div>
             <button id="support_button">Support!</button>
         </div>
-        <dialog id="resident">
+        <dialog id="main_dialog">
             <div class="dialog-header">
                 <div class="back-button"><i class="fa-solid fa-chevron-left fa-2x fa-inverse"></i></div>
                 <div class="dialog-title">Resident</div>
@@ -41,7 +41,9 @@
                 <div class="help-button">?</div>
                 <div class="close-button"><i class="fa-solid fa-xmark fa-2x fa-inverse"></i></div>
             </div>
-            <div class="dialog-body">
+            <!-- dialog "resident": select resident to support -->
+            <input type="radio" class="dialog-card-selector" data-card-step="resident" name="main_dialog_card" />
+            <div class="dialog-body" id="dialog_resident_info">
                 <div class="resident-info">
                     <div class="resident-photo">
                         <img src="assets/residents/ryo.png" />
@@ -103,19 +105,29 @@
                     <div class="resident-name">山田　涼</div>
                 </div>
             </div>
-        </dialog>
-        <dialog id="residentToSupport">
-            <div class="dialog-header">
-                <div class="back-button"><i class="fa-solid fa-chevron-left fa-2x fa-inverse"></i></div>
-                <div class="dialog-title" id="residentName"></div>
-                <div class="people-label">
-                    <i class="fa-solid fa-user fa-lg"></i>
-                    <span id="resident_count">3</span>
+
+            <!-- dialog "detail": resident detail -->
+            <input type="radio" class="dialog-card-selector" data-card-step="detail" name="main_dialog_card" />
+            <div class="dialog-body" id="dialog_resident_detail">
+                <div class="resident-detail">
+                    resident details
                 </div>
-                <div class="help-button">?</div>
-                <div class="close-button"><i class="fa-solid fa-xmark fa-2x fa-inverse"></i></div>
             </div>
-            <div class="dialog-body">
+
+            <!-- dialog "payment": payment info form -->
+            <input type="radio" class="dialog-card-selector" data-card-step="payment" name="main_dialog_card" />
+            <div class="dialog-body" id="dialog_payment_info">
+                <div class="payment-info">
+                    payment info
+                </div>
+            </div>
+
+            <!-- dialog "paymethod": pay method -->
+            <input type="radio" class="dialog-card-selector" data-card-step="paymethod" name="main_dialog_card" />
+            <div class="dialog-body" id="dialog_pay_method">
+                <div class="pay-method">
+                    pay method
+                </div>
             </div>
         </dialog>
     </body>

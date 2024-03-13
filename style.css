@@ -217,12 +217,21 @@ dialog[open]
     cursor: pointer;
 }
 
+.dialog-card-selector
+{
+    display: none;
+}
+.dialog-card-selector:checked + .dialog-body
+{
+    display: flex;
+}
+
 .dialog-body
 {
+    display: none;
     background-color: #D2C8BB;
     flex: 1;
     border: 2px solid #A48B78;
-    display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     border-radius: 10px;

@@ -1,34 +1,20 @@
 class DialogModel
 {
-    constructor()
+    constructor(dialog)
     {
-        this.dialogStack = [];
+        this.dialog = dialog;
     }
-    show(dialog)
+    showModal()
     {
-        if(this.dialogStack.length > 0)
-        {
-            this.dialogStack.at(-1).close();
-        }
-        dialog.showModal();
-        this.dialogStack.push(dialog);
+        this.dialog.showModal();
     }
-    pop()
+    close()
     {
-        if(this.dialogStack.length > 0)
-        {
-            this.dialogStack.at(-1).close();
-            const closedDialog = this.dialogStack.pop();
-            if(this.dialogStack.length > 0)
-            {
-                this.dialogStack.at(-1).showModal();
-            }
-            return closedDialog;
-        }
+        this.dialog.close();
     }
-    closeAll()
+    showCard(step)
     {
-        this.dialogStack.forEach((dialog) => dialog.close());
-        this.dialogStack = [];
+        const selector = $(`.dialog-card-selector[data-card-step="${step}"]`);
+        selector.checked = true;
     }
 }
