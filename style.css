@@ -260,6 +260,7 @@ dialog[open]
     background-color: white;
     border: 2px solid #A48B78;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .resident-photo
@@ -306,6 +307,8 @@ dialog[open]
 {
     flex: 1;
     padding: 20px 0 0 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 #pay_plan
@@ -335,6 +338,19 @@ dialog[open]
     color: #8F4B3E;
     padding: 5px;
     border-radius: 3px;
+}
+
+.notification
+{
+    flex: 1;
+    display: flex;
+    align-items: end;
+    margin-bottom: 20px;
+}
+
+#select_plan
+{
+    padding: 5px 50px;
 }
 
 /* payment form */
