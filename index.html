@@ -33,7 +33,7 @@
         <dialog id="main_dialog">
             <div class="dialog-header">
                 <div class="back-button"><i class="fa-solid fa-chevron-left fa-2x fa-inverse"></i></div>
-                <div class="dialog-title">Resident</div>
+                <div id="dialog_title">Resident</div>
                 <div class="people-label">
                     <i class="fa-solid fa-user fa-lg"></i>
                     <span id="resident_count">3</span>
@@ -44,86 +44,30 @@
             <!-- dialog "resident": select resident to support -->
             <input type="radio" class="dialog-card-selector" data-card-step="resident" name="main_dialog_card" />
             <div class="dialog-body" id="dialog_resident_info">
-                <div class="resident-info">
-                    <div class="resident-photo">
-                        <img src="assets/residents/ryo.png" />
-                    </div>
-                    <div class="resident-name">山田　涼</div>
-                </div>
-                <div class="resident-info">
-                    <div class="resident-photo">
-                        <img src="assets/residents/ryo.png" />
-                    </div>
-                    <div class="resident-name">山田　涼</div>
-                </div>
-                <div class="resident-info">
-                    <div class="resident-photo">
-                        <img src="assets/residents/ryo.png" />
-                    </div>
-                    <div class="resident-name">山田　涼</div>
-                </div>
-                <div class="resident-info">
-                    <div class="resident-photo">
-                        <img src="assets/residents/ryo.png" />
-                    </div>
-                    <div class="resident-name">山田　涼</div>
-                </div>
-                <div class="resident-info">
-                    <div class="resident-photo">
-                        <img src="assets/residents/ryo.png" />
-                    </div>
-                    <div class="resident-name">山田　涼</div>
-                </div>
-                <div class="resident-info">
-                    <div class="resident-photo">
-                        <img src="assets/residents/ryo.png" />
-                    </div>
-                    <div class="resident-name">山田　涼</div>
-                </div>
-                <div class="resident-info">
-                    <div class="resident-photo">
-                        <img src="assets/residents/ryo.png" />
-                    </div>
-                    <div class="resident-name">山田　涼</div>
-                </div>
-                <div class="resident-info">
-                    <div class="resident-photo">
-                        <img src="assets/residents/ryo.png" />
-                    </div>
-                    <div class="resident-name">山田　涼</div>
-                </div>
-                <div class="resident-info">
-                    <div class="resident-photo">
-                        <img src="assets/residents/ryo.png" />
-                    </div>
-                    <div class="resident-name">山田　涼</div>
-                </div>
-                <div class="resident-info">
-                    <div class="resident-photo">
-                        <img src="assets/residents/ryo.png" />
-                    </div>
-                    <div class="resident-name">山田　涼</div>
-                </div>
+                
             </div>
 
             <!-- dialog "detail": resident detail -->
             <input type="radio" class="dialog-card-selector" data-card-step="detail" name="main_dialog_card" />
             <div class="dialog-body" id="dialog_resident_detail">
-                <img class="resident-big-photo" src="assets/residents/ryo.png" />
-                <div class="resident-description">
+                <img id="resident_big_photo" src="assets/residents/ryo.png" />
+                <div id="resident_description" class="resident-description">
                     fofofobaraarar
                 </div>
                 <div class="pay-plan">
-                    <select id="pay_plan">
-                        <option value="1">月捐</option>
-                        <option value="2">季捐</option>
-                        <option value="3">半年捐</option>
-                        <option value="4">年捐</option>
-                    </select>
-                    <div class="money-tag">$700</div>
-                    <input type="checkbox" id="extra_support" />
-                    <label for="extra_support">支持發展型志工</label>
-                    <div class="money-tag">$500</div>
+                    <div class="pay-option">
+                        <select id="pay_plan">
+                            <option value="1">月捐</option>
+                            <option value="2">季捐</option>
+                            <option value="3">半年捐</option>
+                            <option value="4">年捐</option>
+                        </select>
+                        <div class="money-tag">$700</div>
+                    </div>
+                    <div class="pay-option">
+                        <label for="extra_support"><input type="checkbox" id="extra_support" />支持發展型志工</label>
+                        <div class="money-tag">$500</div>
+                    </div>
                     <div class="notification">
                         【捐款注意事項說明】
                         因應洗錢防制法規定，

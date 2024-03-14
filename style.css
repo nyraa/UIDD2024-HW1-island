@@ -169,7 +169,7 @@ dialog[open]
     position: absolute;
 }
 
-.dialog-title
+#dialog_title
 {
     flex: 1;
     text-align: center;
@@ -282,9 +282,59 @@ dialog[open]
 }
 
 /* resident support detail */
-.resident-support-detail
+#dialog_resident_detail
 {
-    
+    font-weight: normal;
+}
+
+#resident_big_photo
+{
+    width: 40%;
+    object-fit: cover;
+    border-radius: 30px;
+}
+
+#resident_description
+{
+    flex: 1;
+    padding: 20px;
+    font-size: 20pt;
+    border-right: 1px solid #D2C8BB;
+}
+
+.pay-plan
+{
+    flex: 1;
+    padding: 20px 0 0 20px;
+}
+
+#pay_plan
+{
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+}
+
+#pay_plan, label:has(#extra_support)
+{
+    width: 170px;
+    margin-right: 10px;
+}
+
+.pay-option
+{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.money-tag
+{
+    display: inline;
+    background-color: #FBE2ED;
+    color: #8F4B3E;
+    padding: 5px;
+    border-radius: 3px;
 }
 
 /* payment form */

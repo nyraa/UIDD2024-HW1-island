@@ -1,5 +1,6 @@
+let dialogModel = null;
 window.addEventListener("load", function() {
-    const dialogModel = new DialogModel(document.getElementById("main_dialog"));
+    dialogModel = new DialogModel(document.getElementById("main_dialog"));
     drawIsland(3);
 
     const supportButton = document.getElementById("support_button");
@@ -19,7 +20,52 @@ window.addEventListener("load", function() {
             dialogModel.close();
         });
     });
+    this.document.getElementById("select_plan").addEventListener("click", function() {
+        dialogModel.showCard("payment", "Data");
+    });
+    loadResidentCard();
 });
+
+function payToResident(resident)
+{
+    document.getElementById("resident_big_photo").src = resident.image;
+    document.getElementById("resident_description").textContent = resident.description;
+    dialogModel.showCard("detail", "Donation");
+}
+
+function loadResidentCard()
+{
+    // TODO: fetch resident data
+    const residents = [
+        {
+            name: "山田　涼",
+            description: "窮到吃草，多多捐",
+            image: "assets/residents/ryo.png"
+        },
+    ];
+    // TODO: generate resident cards
+    const residentContainer = document.getElementById("dialog_resident_info");
+    residents.forEach((resident) => {
+        const card = document.createElement("div");
+        card.classList.add("resident-info");
+        const photo = document.createElement("div");
+        photo.classList.add("resident-photo");
+        const img = document.createElement("img");
+        img.src = resident.image;
+        photo.appendChild(img);
+        const name = document.createElement("div");
+        name.classList.add("resident-name");
+        name.textContent = resident.name;
+        card.appendChild(photo);
+        card.appendChild(name);
+        residentContainer.appendChild(card);
+
+        card.addEventListener("click", function() {
+            payToResident(resident);
+        });
+    });
+    // TODO: add event listeners to resident cards
+}
 
 function drawIsland(stage=0)
 {
