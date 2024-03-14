@@ -301,7 +301,7 @@ dialog[open]
     flex: 1;
     padding: 20px;
     font-size: 20pt;
-    border-right: 1px solid #D2C8BB;
+    border-right: 1px solid #A48B78;
 }
 
 .pay-plan
@@ -352,6 +352,7 @@ dialog[open]
 #select_plan
 {
     padding: 5px 50px;
+    margin-bottom: 7px;
 }
 
 /* payment form */
