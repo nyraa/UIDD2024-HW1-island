@@ -116,6 +116,7 @@ button
     border-image-source: url(assets/button.svg);
     border-image-width: 10px 10px 20px 10px;
     border-image-slice: 20 20 39 20;
+    user-select: none;
 }
 
 button:active
