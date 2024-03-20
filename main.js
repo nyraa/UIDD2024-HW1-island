@@ -7,7 +7,7 @@ window.addEventListener("load", function() {
     supportButton.addEventListener("click", function() {
         const dialog = document.getElementById("main_dialog");
         // dialogModel.showCard("resident");
-        dialogModel.showCard("paymethod");
+        dialogModel.showCard("resident");
         dialogModel.showModal();
     });
 
@@ -20,6 +20,17 @@ window.addEventListener("load", function() {
         button.addEventListener("click", function() {
             dialogModel.close();
         });
+    });
+
+    this.document.getElementById("extra_support").addEventListener("change", function() {
+        if (this.checked)
+        {
+            document.getElementById("extra_support_label").textContent = "+$500";
+        }
+        else
+        {
+            document.getElementById("extra_support_label").textContent = "+$0";
+        }
     });
     this.document.getElementById("select_plan").addEventListener("click", function() {
         dialogModel.showCard("payment", "Data");
