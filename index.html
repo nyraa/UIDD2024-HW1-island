@@ -158,7 +158,18 @@
             <input type="radio" class="dialog-card-selector" data-card-step="paymethod" name="main_dialog_card" />
             <div class="dialog-body" id="dialog_pay_method">
                 <div class="pay-method">
-                    pay method
+                    <h3>選擇付款方式</h3>
+                    <label for="paymethod_1"><input type="radio" name="paymethod" id="paymethod_1" value="1" checked />超商條碼</label>
+                    <label for="paymethod_2"><input type="radio" name="paymethod" id="paymethod_2" value="2" />信用卡</label>
+                    <label for="paymethod_3"><input type="radio" name="paymethod" id="paymethod_3" value="3" />美國卡</label>
+                    <div class="notification">
+                        【捐款注意事項說明】
+                        因應洗錢防制法規定，
+                        ATM 轉帳，單筆交易上限為 49,999 元。
+                        信用卡（包括國外卡、Google pay、samsung pay、line pay、銀聯卡）等交易，單筆上限為 199,999 元。
+                        美國運通卡不在此限額。
+                    </div>
+                    <button id="pay_next_button">下一步　<i class="fa-solid fa-arrow-right fa-lg fa-inverse"></i></button>
                 </div>
             </div>
         </dialog>

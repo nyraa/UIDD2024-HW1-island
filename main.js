@@ -6,7 +6,8 @@ window.addEventListener("load", function() {
     const supportButton = document.getElementById("support_button");
     supportButton.addEventListener("click", function() {
         const dialog = document.getElementById("main_dialog");
-        dialogModel.showCard("resident");
+        // dialogModel.showCard("resident");
+        dialogModel.showCard("paymethod");
         dialogModel.showModal();
     });
 
@@ -22,6 +23,10 @@ window.addEventListener("load", function() {
     });
     this.document.getElementById("select_plan").addEventListener("click", function() {
         dialogModel.showCard("payment", "Data");
+    });
+
+    this.document.getElementById("paymethod_next_button").addEventListener("click", function() {
+        dialogModel.showCard("paymethod", "Payment Method");
     });
     loadResidentCard();
 });

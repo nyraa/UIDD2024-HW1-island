@@ -341,7 +341,7 @@ dialog[open]
     border-radius: 3px;
 }
 
-.notification
+#dialog_resident_detail .notification
 {
     flex: 1;
     display: flex;
@@ -431,4 +431,32 @@ div:has(>#paymethod_next_button)
     font-size: 22pt;
     display: inline-flex;
     align-items: center;
+}
+
+/* payment method */
+.pay-method
+{
+    padding: 20px 50px 10px 50px;
+    font-weight: normal;
+}
+
+.pay-method label
+{
+    display: block;
+    margin-bottom: 20px;
+}
+
+#dialog_pay_method .notification
+{
+    margin-top: 40px;
+}
+#pay_next_button
+{
+    padding: 10px 24px;
+    font-size: 22pt;
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    right: 50px;
+    bottom: 50px;
 }
