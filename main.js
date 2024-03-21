@@ -32,6 +32,19 @@ window.addEventListener("load", function() {
             document.getElementById("extra_support_label").textContent = "+$0";
         }
     });
+
+    this.document.getElementById("pay_plan").addEventListener("change", function() {
+        const plan = this.value;
+        const planList = {
+            1: 700,
+            2: 2100,
+            3: 4200,
+            4: 8400
+        };
+        document.getElementById("pay_plan_label").textContent = `$${planList[plan]}`;
+    });
+
+
     this.document.getElementById("select_plan").addEventListener("click", function() {
         dialogModel.showCard("payment", "Data");
     });
