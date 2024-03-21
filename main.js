@@ -37,7 +37,14 @@ window.addEventListener("load", function() {
     });
 
     this.document.getElementById("paymethod_next_button").addEventListener("click", function() {
-        dialogModel.showCard("paymethod", "Payment Method");
+        if(document.getElementById("payment_info").checkValidity() || true)
+        {
+            dialogModel.showCard("paymethod", "Payment Method");
+        }
+        else
+        {
+            document.getElementById("payment_info").reportValidity();
+        }
     });
     loadResidentCard();
 });

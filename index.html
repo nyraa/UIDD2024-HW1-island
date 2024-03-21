@@ -85,16 +85,16 @@
             <div class="dialog-body" id="dialog_payment_info">
                 <div class="payment-info-layout">
                     <h3>選擇捐款人</h3>
-                    <div class="payment-info">
+                    <form class="payment-info" id="payment_info">
                         <!-- 捐款人姓名 -->
                         <div class="left-half">
-                            <label class="required" for="donor_name">捐款人姓名</label>
-                            <input type="text" placeholder="捐款人姓名" id="donor_name" />
+                            <label for="donor_name">捐款人姓名</label>
+                            <input type="text" placeholder="捐款人姓名" id="donor_name" required />
                         </div>
                         <!-- 稱謂 -->
                         <div class="right-half">
                             <label class="required" for="donor_title">稱謂</label>
-                            <select id="donor_title">
+                            <select id="donor_title" required>
                                 <option value="1">先生</option>
                                 <option value="2">小姐</option>
                                 <option value="3">牛角麵包</option>
@@ -104,35 +104,35 @@
                         <!-- 聯絡電話 -->
                         <div class="left-half">
                             <label class="required" for="donor_phone">聯絡電話</label>
-                            <input type="text" placeholder="聯絡電話" id="donor_phone" />
+                            <input type="text" placeholder="聯絡電話" id="donor_phone" required />
                         </div>
                         <!-- 生日 -->
                         <div class="right-half">
                             <label class="required" for="donor_birthday">生日</label>
-                            <input type="date" placeholder="生日" id="donor_birthday" />
+                            <input type="date" placeholder="生日" id="donor_birthday" required />
                         </div>
                         <!-- 國家 -->
                         <div>
                             <label class="required" for="donor_country">國家</label>
-                            <select id="donor_country">
+                            <select id="donor_country" required>
                             </select>
                         </div>
                         <!-- 縣市 -->
                         <div>
                             <label class="required" for="donor_city">縣市</label>
-                            <select id="donor_city">
+                            <select id="donor_city" required>
                             </select>
                         </div>
                         <!-- 國家 -->
                         <div>
                             <label class="required">國家?</label>
-                            <select>
+                            <select required>
                             </select>
                         </div>
                         <!-- 縣市 -->
                         <div>
                             <label class="required">縣市???</label>
-                            <select>
+                            <select required>
                             </select>
                         </div>
                         <!-- 地址 -->
@@ -150,7 +150,7 @@
                         <div>
                             <button id="paymethod_next_button">付款方式　<i class="fa-solid fa-arrow-right fa-lg fa-inverse"></i></button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </div>
 

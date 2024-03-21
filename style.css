@@ -16,6 +16,11 @@ body
     margin: 0;
 }
 
+label
+{
+    user-select: none;
+}
+
 nav
 {
     height: 80px;
@@ -381,7 +386,7 @@ dialog[open]
     flex: 0;
 }
 
-.required::before
+label:has(+input[required])::before, label:has(+select[required])::before
 {
     content: "*";
     color: red;
