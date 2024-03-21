@@ -82,15 +82,60 @@ function payToResident(resident)
 
 function loadResidentCard()
 {
-    // TODO: fetch resident data
+    // fetch resident data
     const residents = [
         {
             name: "山田　涼",
             description: "窮到吃草，多多捐",
             image: "assets/residents/ryo.png"
         },
+        {
+            name: "Foo",
+            description: "You can help me to buy a new computer",
+            image: "https://thispersondoesnotexist.com/"
+        },
+        {
+            name: "Bar",
+            description: "I need money to buy a new car",
+            image: "https://thispersondoesnotexist.com/"
+        },
+        {
+            name: "Baz",
+            description: "I need money to buy a new house",
+            image: "https://thispersondoesnotexist.com/"
+        },
+        {
+            name: "Qux",
+            description: "I need money to buy a new phone",
+            image: "https://thispersondoesnotexist.com/"
+        },
+        {
+            name: "Quux",
+            description: "I need money to buy a new TV",
+            image: "https://thispersondoesnotexist.com/"
+        },
+        {
+            name: "Corge",
+            description: "I need money to buy a new bike",
+            image: "https://thispersondoesnotexist.com/"
+        },
+        {
+            name: "Grault",
+            description: "I need money to buy a new watch",
+            image: "https://thispersondoesnotexist.com/"
+        },
+        {
+            name: "Garply",
+            description: "I need money to buy a new bag",
+            image: "https://thispersondoesnotexist.com/"
+        },
+        {
+            name: "Waldo",
+            description: "I need money to buy a new book",
+            image: "https://thispersondoesnotexist.com/"
+        }
     ];
-    // TODO: generate resident cards
+    // generate resident cards
     const residentContainer = document.getElementById("dialog_resident_info");
     residents.forEach((resident) => {
         const card = document.createElement("div");
@@ -111,7 +156,6 @@ function loadResidentCard()
             payToResident(resident);
         });
     });
-    // TODO: add event listeners to resident cards
 }
 
 function drawIsland(stage=0)
