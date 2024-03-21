@@ -228,6 +228,21 @@ dialog[open]
     cursor: pointer;
 }
 
+.close-button::after
+{
+    content: "";
+    display: inline-block;
+    width: var(--button-size);
+    height: var(--button-size);
+    position: absolute;
+    border-top: #874539 calc(var(--button-size) / 2) solid;
+    border-bottom: #874539 calc(var(--button-size) / 2) solid;
+    border-left: transparent calc(var(--button-size) / 2) solid;
+    border-right: transparent calc(var(--button-size) / 2) solid;
+    left: calc(var(--button-size) / 2);
+    box-sizing: border-box;
+}
+
 .dialog-card-selector
 {
     display: none;
