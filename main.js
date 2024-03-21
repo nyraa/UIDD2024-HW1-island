@@ -28,7 +28,7 @@ window.addEventListener("load", function() {
     });
 
     this.document.getElementById("resident_button").addEventListener("click", function() {
-        dialogModel.showCard("resident", "Resident");
+        dialogModel.showCard("residentCol", "Resident");
         dialogModel.showModal();
     });
 
@@ -59,7 +59,8 @@ window.addEventListener("load", function() {
         dialogModel.showCard("payment", "Data");
     });
 
-    this.document.getElementById("paymethod_next_button").addEventListener("click", function() {
+    this.document.getElementById("paymethod_next_button").addEventListener("click", function(e) {
+        e.preventDefault();
         if(document.getElementById("payment_info").checkValidity())
         {
             dialogModel.showCard("paymethod", "Payment Method");

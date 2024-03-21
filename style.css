@@ -101,6 +101,7 @@ nav a
     font-weight: bold;
     color: #727171;
     cursor: pointer;
+    user-select: none;
 }
 
 #island_button::before, #resident_button::before
@@ -522,23 +523,22 @@ div:has(>#paymethod_next_button)
     bottom: 50px;
 }
 
-/* island dialog */
-#islands
+/* island, resident collection dialog */
+#islands, #resident_collections
 {
     flex-wrap: wrap;
     justify-content: space-between;
 }
-.island
+.island, .resident-avatar
 {
     width: 33%;
     height: 50%;
     cursor: pointer;
     position: relative;
 }
-.island::before
+.island::before, .resident-avatar::before
 {
     content: "";
-    background-image: var(--island-img);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -546,12 +546,21 @@ div:has(>#paymethod_next_button)
     height: 100%;
     display: inline-block;
 }
-.island[data-open="false"]::before
+.island::before
+{
+    background-image: var(--island-img);
+}
+.resident-avatar::before
+{
+    background-image: var(--resident-img);
+}
+
+.island[data-open="false"]::before, .resident-avatar[data-open="false"]::before
 {
     filter: grayscale(100%) brightness(0) contrast(1);
     opacity: 0.5;
 }
-.island[data-open="false"]::after
+.island[data-open="false"]::after, .resident-avatar[data-open="false"]::after
 {
     content: "?";
     font-size: 80pt;
