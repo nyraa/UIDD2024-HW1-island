@@ -7,7 +7,7 @@ window.addEventListener("load", function() {
     supportButton.addEventListener("click", function() {
         const dialog = document.getElementById("main_dialog");
         // dialogModel.showCard("resident");
-        dialogModel.showCard("resident");
+        dialogModel.showCard("resident", "Resident");
         dialogModel.showModal();
     });
 
@@ -20,6 +20,16 @@ window.addEventListener("load", function() {
         button.addEventListener("click", function() {
             dialogModel.close();
         });
+    });
+
+    this.document.getElementById("island_button").addEventListener("click", function() {
+        dialogModel.showCard("island", "Resident");
+        dialogModel.showModal();
+    });
+
+    this.document.getElementById("resident_button").addEventListener("click", function() {
+        dialogModel.showCard("resident", "Resident");
+        dialogModel.showModal();
     });
 
     this.document.getElementById("extra_support").addEventListener("change", function() {
@@ -50,7 +60,7 @@ window.addEventListener("load", function() {
     });
 
     this.document.getElementById("paymethod_next_button").addEventListener("click", function() {
-        if(document.getElementById("payment_info").checkValidity() || true)
+        if(document.getElementById("payment_info").checkValidity())
         {
             dialogModel.showCard("paymethod", "Payment Method");
         }

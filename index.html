@@ -28,6 +28,12 @@
         </nav>
         <div id="body">
             <canvas id="island_canvas" width="1000" height="500"></canvas>
+            <div id="island_button">
+                Island
+            </div>
+            <div id="resident_button">
+                Resident
+            </div>
             <div class="mark">MY FAMILY</div>
             <button id="support_button">Support!</button>
         </div>
@@ -63,7 +69,7 @@
                             <option value="3">半年捐</option>
                             <option value="4">年捐</option>
                         </select>
-                        <div class="money-tag">$700</div>
+                        <div class="money-tag" id="pay_plan_label">$700</div>
                     </div>
                     <div class="pay-option">
                         <label for="extra_support"><input type="checkbox" id="extra_support" />支持發展型志工（$500）</label>
@@ -125,20 +131,19 @@
                         </div>
                         <!-- 國家 -->
                         <div>
-                            <label class="required">國家?</label>
-                            <select required>
+                            <label class="required">地區</label>
+                            <select id="donor_town" required>
                             </select>
                         </div>
                         <!-- 縣市 -->
                         <div>
-                            <label class="required">縣市???</label>
-                            <select required>
-                            </select>
+                            <label class="required">郵遞區號</label>
+                            <input type="text" id="donor_zipcode" required>
                         </div>
                         <!-- 地址 -->
                         <div class="full-width">
                             <label class="required" for="donor_address">地址</label>
-                            <input type="text" placeholder="例：中壢市龍川二街134號" id="donor_address" />
+                            <input type="text" placeholder="例：龍川二街134號" id="donor_address" />
                         </div>
                         <div class="left-half payment-footer">
                             <h3>選擇收據（僅限這次捐款使用）</h3>
@@ -170,6 +175,23 @@
                         美國運通卡不在此限額。
                     </div>
                     <button id="pay_next_button">下一步　<i class="fa-solid fa-arrow-right fa-lg fa-inverse"></i></button>
+                </div>
+            </div>
+
+            <!-- dialog "island": island collections -->
+            <input type="radio" class="dialog-card-selector" data-card-step="island" name="main_dialog_card" />
+            <div class="dialog-body" id="islands">
+                <div class="island" style="--island-img: url('assets/island/thumb/0.png')" data-open="false">
+                </div>
+                <div class="island" style="--island-img: url('assets/island/thumb/1.png')" data-open="false">
+                </div>
+                <div class="island" style="--island-img: url('assets/island/thumb/2.png')" data-open="false">
+                </div>
+                <div class="island" style="--island-img: url('assets/island/thumb/3.png')" data-open="false">
+                </div>
+                <div class="island" style="--island-img: url('assets/island/thumb/4.png')" data-open="false">
+                </div>
+                <div class="island" style="--island-img: url('assets/island/thumb/5.png')" data-open="false">
                 </div>
             </div>
         </dialog>
