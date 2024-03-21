@@ -322,7 +322,7 @@ dialog[open]
 
 #pay_plan, label:has(#extra_support)
 {
-    width: 170px;
+    width: 200px;
     margin-right: 10px;
 }
 
