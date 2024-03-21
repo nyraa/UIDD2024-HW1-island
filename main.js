@@ -70,6 +70,12 @@ window.addEventListener("load", function() {
             document.getElementById("payment_info").reportValidity();
         }
     });
+
+    this.document.getElementById("pay_next_button").addEventListener("click", function() {
+        dialogModel.clear();
+        dialogModel.showCard("island", "Island");
+    });
+
     loadResidentCard();
 });
 

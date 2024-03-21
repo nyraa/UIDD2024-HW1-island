@@ -14,6 +14,10 @@ class DialogModel
         this.dialog.close();
         this.cardStack = [];
     }
+    clear()
+    {
+        this.cardStack = [];
+    }
     showCard(step, title)
     {
         if(title)
